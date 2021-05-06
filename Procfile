@@ -1,1 +1,1 @@
-worker: python botbpan.py
+worker: python shok.py
