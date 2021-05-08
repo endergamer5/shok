@@ -27,27 +27,28 @@ def tov():
     key = types.InlineKeyboardMarkup()
     key.row(types.InlineKeyboardButton('Тв (new) ОПТ ОТ 20гр на заказ- 7000 RUB ', callback_data='opl'))
     key.row(types.InlineKeyboardButton('Тв 1г - 700 RUB ', callback_data='opl1'))
-    key.row(types.InlineKeyboardButton('Тв 3г - 1400 RUB ', callback_data='opl2'))
     key.row(types.InlineKeyboardButton('↩ Назад', callback_data='glm'))
     return key
 
 def btc ():
     key = types.InlineKeyboardMarkup()
     key.row(types.InlineKeyboardButton('Оплата BTC', callback_data='vse'))
+    key.row(types.InlineKeyboardButton('Оплата Qiwi', callback_data='vse01'))
     key.row(types.InlineKeyboardButton(' ↩Назад', callback_data='glm'))
     return key
 
 def btc1 ():
     key = types.InlineKeyboardMarkup()
     key.row(types.InlineKeyboardButton('Оплата BTC', callback_data='vse1'))
+    key.row(types.InlineKeyboardButton('Оплата Qiwi', callback_data='vse11'))
     key.row(types.InlineKeyboardButton(' ↩Назад', callback_data='glm'))
     return key
 
-def btc2 ():
-    key = types.InlineKeyboardMarkup()
-    key.row(types.InlineKeyboardButton('Оплата BTC', callback_data='vse2'))
-    key.row(types.InlineKeyboardButton(' ↩Назад', callback_data='glm'))
-    return key
+# def btc2 ():
+#     key = types.InlineKeyboardMarkup()
+#     key.row(types.InlineKeyboardButton('Оплата BTC', callback_data='vse2'))
+#     key.row(types.InlineKeyboardButton(' ↩Назад', callback_data='glm'))
+#     return key
 
 def check ():
     key = types.InlineKeyboardMarkup()
@@ -171,6 +172,20 @@ def inlin(c):
             chat_id=c.message.chat.id,
             message_id=c.message.message_id,
             text="🛄 Заказ #1213\n\nВы приобретаете:\n 📦 Тв (new) ОПТ ОТ 20гр\n\nЛокация:\n🌇 Минусинск\n\nДля покупки, переведите на blockchain кошелек:\n1JUQDrrH8JGPGJGFioTx2BMv1S5Y3JeWrN\nсумму:\n0,001601 BTC,\n❗️ Оплату производить точной суммой BTC и одним платежом, иначе платеж не будет учтен. Для вас был зарезервирован товар на 30 минут. В течении 30 минут переведите 0,001601 BTC на счет.",
+            parse_mode="markdown",
+            reply_markup=check ())
+    elif c.data=='vse01':
+        bot.edit_message_text(
+            chat_id=c.message.chat.id,
+            message_id=c.message.message_id,
+            text="🛄 Заказ #1214\n\nВы приобретаете:\n 📦 Тв (new) ОПТ ОТ 20гр\n\nЛокация:\n🌇 Минусинск\n\nДля покупки, переведите на Qiwi кошелек:\n+79515586641\nсумму:\n7001 RUB,\n❗️ Оплату производить точной суммой RUB и одним платежом, иначе платеж не будет учтен. Для вас был зарезервирован товар на 30 минут. В течении 30 минут переведите 7001 RUB на счет.",
+            parse_mode="markdown",
+            reply_markup=check ())
+    elif c.data=='vse11':
+        bot.edit_message_text(
+            chat_id=c.message.chat.id,
+            message_id=c.message.message_id,
+            text="🛄 Заказ #1217\n\nВы приобретаете:\n 📦 Тв 1г\n\nЛокация:\n🌇 Минусинск\n\nДля покупки, переведите на Qiwi кошелек:\n+79515586641\nсумму:\n700 RUB,\n❗️ Оплату производить точной суммой RUB и одним платежом, иначе платеж не будет учтен. Для вас был зарезервирован товар на 30 минут. В течении 30 минут переведите 700 RUB на счет.",
             parse_mode="markdown",
             reply_markup=check ())
     elif c.data=='vse1':
