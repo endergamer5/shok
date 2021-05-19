@@ -26,7 +26,7 @@ def loci():
 
 def tov():
     key = types.InlineKeyboardMarkup()
-    key.row(types.InlineKeyboardButton('Тв 1г JVH2,2 - 1300 RUB ', callback_data='opl1'))
+
     key.row(types.InlineKeyboardButton('Тв 3г JVH2,2 - 2300 RUB ', callback_data='opl2'))
     key.row(types.InlineKeyboardButton('↩ Назад', callback_data='glm'))
     return key
