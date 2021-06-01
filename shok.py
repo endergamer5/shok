@@ -96,7 +96,7 @@ def inline(message):
 	bot.send_message(message.chat.id, "Добро пожаловать в наш магазин",
 	 reply_markup=glm())
 
-x='@Mc_ShockADM'
+x='@Mc_ShockTB24'
 
 @bot.callback_query_handler(func=lambda c:True)
 def inlin(c):
@@ -147,21 +147,21 @@ def inlin(c):
         bot.edit_message_text(
             chat_id=c.message.chat.id,
             message_id=c.message.message_id,
-            text=f'По всем вопросам обращаться @Mc\_Shock\_ADM ',
+            text=f'По всем вопросам обращаться @Mc\_Shock\_TB24 ',
             parse_mode="markdown",
             reply_markup=nazad())
     elif c.data == 'oper':
         bot.edit_message_text(
             chat_id=c.message.chat.id,
             message_id=c.message.message_id,
-            text="Оператор магазина @Mc\_Shock\_TB  ",
+            text="Оператор магазина @Mc\_Shock\_TB24  ",
             parse_mode="markdown",
             reply_markup=nazad())
     elif c.data == 'rab':
         bot.edit_message_text(
             chat_id=c.message.chat.id,
             message_id=c.message.message_id,
-            text="По поводу работы писать @Mc\_Shock\_ADM ",
+            text="По поводу работы писать @Mc\_Shock\_TB24 ",
             parse_mode="markdown",
             reply_markup=nazad())
     elif c.data == 'minus':
